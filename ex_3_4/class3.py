@@ -1,12 +1,12 @@
 class BankAccount:
-    def __int__(self, accountNumber, name, balance):
-        self.accountNumber = accountNumber
-        self.name = name
-        self.balance = balance
-    def Deposit(self,Depositmony):
+    def __int__(self, accountNumber: int, name:str, balance: int):
+        self.accountNumber:int = accountNumber
+        self.name: str= name
+        self.balance:int = balance
+    def deposit(self,Depositmony:int):
         self.balance += Depositmony
         print(f'you have a total of {self.balance} after Deposit')
-    def Withdrawal(self,WithdrawalMony):
+    def withdrawal(self,WithdrawalMony:int):
         self.balance -= WithdrawalMony
         print(f'you have a total of {self.balance} after Withdrawal Mony')
     def bankFees(self):
