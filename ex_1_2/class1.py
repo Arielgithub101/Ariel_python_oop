@@ -21,9 +21,9 @@ class Parallelepipede(Rectangle):
     def __init__(self, length: int, width: int , height: int):
         Rectangle.__init__(self, length, width)
         self.height: int = height
-
+    @property
     def volume(self):
         return self.length * self.width * self.height
 
     def display(self):
-        print(f'the Voluum of the Parallelepipede is {self.volume()} ')
+        print(f'the Voluum of the Parallelepipede is {self.volume} ')
