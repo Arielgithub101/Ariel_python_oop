@@ -1,15 +1,16 @@
 class Person:
-    def __int__(self, name: str, age: int):
-        self.name:str = name
-        self.age:int = age
+    def __init__(self, name: str, age: int):
+        self.name: str = name
+        self.age: int = age
 
     def display(self) -> None:
         print(f'The person name is {self.name} and his age is {self.age}')
 
+
 class Student(Person):
-    def __init__(self, name:str, age:int, section:str):
+    def __init__(self, name: str, age: int, section: str):
         super().__init__(self, name, age)
-        self.section:str = section
+        self.section: str = section
 
     def display(self) -> None:
         print(f'The Student name is : {self.name}')
