@@ -9,9 +9,9 @@ while True:
         print('invalid input , --> need int')
         continue
     else:
-        Rec1 = Rectangle(length, width)
-        Rec1.display()
-        print(Rec1.perimeter)
+        rec1 = Rectangle(length, width)
+        rec1.display()
+        print(rec1.perimeter)
         break
 
 while True:
@@ -24,6 +24,6 @@ while True:
         continue
     else:
 
-        Para1 = Parallelepipede(length_para, width_para, height_para)
-        Para1.display()
+        para1 = Parallelepipede(length_para, width_para, height_para)
+        para1.display()
         break
