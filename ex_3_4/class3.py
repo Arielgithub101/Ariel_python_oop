@@ -15,11 +15,10 @@ class BankAccount:
         self.balance -= withdrawal_money
         print(f'you have a total of {self.balance} after Withdrawal Mony')
 
-    def bank_fees(self,corrent_balnace:int)->float:
+    def bank_fees(self, corrent_balnace: int) -> float:
         if self.transaction == 1:
-            corrent_balnace = self.balance - (self.balance*0.05)
+            corrent_balnace = self.balance - (self.balance * 0.05)
             return corrent_balnace
-
 
     def display(self) -> None:
         print('the total detail of your account is :')
