@@ -23,11 +23,10 @@ class Coputation:
     def test_prim(self, x: int) -> int:
         counter: int = 0
         if x <= 1: return False
-        for i in range(1, x + 1):
+        for i in range(2, (x//2)):
             if x % i == 0:
-                counter += 1
-                if counter > 2: break
-        return counter == 2
+                return False
+        return True
 
     def test_prims(self, x: int, y: int) -> bool:
         counter: int = 0
