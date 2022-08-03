@@ -21,23 +21,24 @@ class Coputation:
         return total
 
     def test_prim(self, x: int) -> int:
-        flag: int = 0
+        counter: int = 0
         if x <= 1: return False
         for i in range(1, x + 1):
             if x % i == 0:
-                flag += 1
-                if flag > 2: break
-        return (flag == 2)
+                counter += 1
+                if counter > 2: break
+        return counter == 2
 
     def test_prims(self, x: int, y: int) -> bool:
-        flag: int = 0
+        counter: int = 0
         max_num: int = max(x, y)
-        if x or y <= 1: return False
+        if x <= 1 or y <= 1:
+            return False
         for i in range(1, max_num + 1):
-            if x % i == 0 and y % i == 0:
-                flag += 1
-                if flag > 2: break
-        return (flag == 2)
+            if x % i == 0 or y % i == 0:
+                counter += 1
+                if counter > 4: break
+        return counter < 4
 
     def table_mult(self, x: int) -> None:
         for i in range(1, 11):
@@ -49,7 +50,7 @@ class Coputation:
             print(self.table_mult(i))
 
     def list_div(self, x: int) -> List[int]:
-        ldiv = []
+        ldiv: List[int] = []
         for i in range(1, x + 1):
             if x % i == 0:
                 ldiv.append(i)

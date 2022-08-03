@@ -8,7 +8,7 @@ class Geometry:
     def distance(self, x1: int, y1: int, x2: int, y2: int) -> int:
         return (((x1 - x2) ** 2) + ((y1 - y2) ** 2)) ** 0.5
 
-    def middle(self, p1: tuple, p2: tuple) -> Tuple[int, int]:
+    def middle(self, p1: Tuple[int, int], p2: Tuple[int, int]) -> Tuple[int, int]:
         x1, y1 = p1
         x2, y2 = p2
         x: int = (x1 + x2) // 2
